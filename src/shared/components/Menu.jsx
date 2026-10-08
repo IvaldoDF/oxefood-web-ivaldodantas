@@ -20,7 +20,7 @@ export default function Menu() {
                 <div id="menu-clientes" popover="auto">
                     <ul className="menu">
                         <li><a href="/cliente">Listar</a></li>
-                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="/cliente-form">Cadastrar</a></li>
                     </ul>
                 </div>
 

@@ -11,3 +11,33 @@ export async function listar(url) {
         throw erro;
     }
 }
+
+export async function incluir(url, objeto) {
+    try {
+        const resposta = await axios.post(`${API_URL}${url}`, objeto);
+        return resposta.data;
+    } catch (erro) {
+        console.error("Erro ao incluir os dados:", erro);
+        throw erro;
+    }
+}
+
+export async function atualizar(url, objeto) {
+    try {
+        const resposta = await axios.put(`${API_URL}${url}`, objeto);
+        return resposta.data;
+    } catch (erro) {
+        console.error("Erro ao atualizar os dados:", erro);
+        throw erro;
+    }
+}
+
+export async function remover(url, id) {
+    try {
+        const resposta = await axios.delete(`${API_URL}${url}/${id}`);
+        return resposta.data;
+    } catch (erro) {
+        console.error("Erro ao remover os dados:", erro);
+        throw erro;
+    }
+}
