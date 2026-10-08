@@ -1,18 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import ClientePage from "../features/cliente/page/ClientePage";
+import Home from "../features/home/page/Home";
 
 export default function Router() {
-
-   return (
-
-       <BrowserRouter>
-
-           <Routes>
-               <Route path="/cliente" element={<ClientePage />} />
-           </Routes>
-
-       </BrowserRouter>
-
-   );
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Redireciona a raiz para a página de clientes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/cliente" element={<ClientePage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
